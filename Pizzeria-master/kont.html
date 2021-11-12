@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghast Café - Kontakt</title>
+<meta name="description" content="Sekcja kontaktowa Ghast Café">
+<meta name="keywords" content="Makłowicze">
+  <link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet" type="text/css">
+    <style>
+body
+{
+background-repeat: no-repeat;
+background-position: top;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+background-color: #ffffdd;
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+.rectangle{
+	width: 960px;
+	margin-top:20px;
+	margin-bottom: 20px;
+	margin-left:60px;
+	color:black;
+}
+
+#container{
+margin-top:120px;
+	width: 100%;
+}
+.square
+{
+	width: 50%;
+	float:left;
+}
+.pasek{
+	position: fixed;
+	z-index:1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:60px;
+}
+.button1{
+	width:200px;
+	height:30px;
+	background-color: #32cd32;
+	float: left;
+	text-align: center;
+	margin-left:8px;
+}
+.button1 i{
+font-family: 'Crete Round', sans-serif;
+font-size:20px;}
+
+.button1:hover{
+	background-color: #21bc21;
+	color: #eeeeee;
+}
+
+.button3{
+	width:200px;
+	height:30px;
+	background-color: #32cd32;
+	float: left;
+	text-align: center;
+	margin-left:8px;
+}
+.button3 i{
+font-family: 'Crete Round', sans-serif;
+font-size:20px;}
+
+.button3:hover{
+	background-color: #21bc21;
+	color: #eeeeee;
+}
+#map {
+	margin-top:100px;
+        width:560px; 
+	height:450px;
+	float: left;
+
+	margin-left:20px;
+	position:static;
+	z-index:0;
+       }
+.tile5
+{
+	float:left;		
+
+	width:270px;
+	height:230px;
+	background-color: #ffffdd;
+	text-align: center;
+	text-align:justify;
+	padding:10px;
+	color:black;
+	font-family: 'Crete Round', sans-serif;	
+	margin-top:28px;
+}
+.tile6
+{
+	float:left;		
+	width:280px;
+	height:360px;
+	background-color:#ffffdd;
+	text-align: center;
+	text-align:justify;
+	padding:10px;
+	color:black;
+	font-family: 'Slabo 27px', sans-serif;	
+	margin-top:30px;
+}
+.tile6 a{
+font-size:15px;}
+.sm
+{
+	float:left;		
+	margin:10px;
+	width:550px;
+	height:100px;
+	background-color: #ffffdd;
+	text-align: center;
+	text-align:justify;
+	padding:20px;
+	color:black;
+	margin-top:20px;
+}
+.yt
+{
+	margin:10px;
+	width:105px;
+	height:105px;
+	background-color: #d94348;
+	float: left;
+	border-radius: 25px;
+}
+.yt:hover
+{
+	background-color:#c83237;
+}
+.fb
+{
+	margin:10px;
+	width:105px;
+	height:105px;
+	background-color: #4668b3;
+	float: left;
+	   border-radius: 25px;
+}
+.fb:hover
+{
+	background-color:#3557a3;
+}
+.gplus
+{
+	margin:10px;
+	width:105px;
+	height:105px;
+	background-color: #d95333;
+	float: left;
+	   border-radius: 25px;
+}
+.gplus:hover
+{
+	background-color:#c84222;
+}
+.tw
+{
+	margin:10px;
+	width:105px;
+	height:105px;
+	background-color: #3095d3;
+	float: left;
+	   border-radius: 25px;
+}
+.tw:hover
+{
+	background-color:#2084c2;
+}
+a.tilelink
+{
+	color:#ffffff;
+	text-decoration:none;
+	display:block;
+	width:230px;
+	height:142px;
+}
+a.tilelink2
+{
+	color:#ffffff;
+	text-decoration:none;
+	display:block;
+}
+a.sociallink
+{
+	color:#ffffff;
+	text-decoration:none;
+	display:block;
+	width:105px;
+	height:105px;
+}
+.button2{
+	display:none;
+	width:100%;
+	height:25px;
+}
+ol {
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        background-color: #32cd32;
+        font-size:18px;
+        height:25px;
+        line-height:30px;
+        text-align:center;
+      }
+
+      ol a {
+        display:block;
+        text-decoration:none;
+        color:#fff;
+        padding:0 5px;
+      }
+
+      ol > li {
+        float:left;
+		margin-left:140px;
+        width:180px;
+        background-color:#303030;
+		color:white;
+        height:25px;
+		display:none;
+      }
+	  
+	  ol > li:hover {
+        background-color:#EEE;
+      }
+
+      ol > li:hover > a {
+        color:#ff1919;
+      }
+
+      ol > li:hover > ul {
+        display:block;
+      }
+
+      ol > li > ul {
+        display:none;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+      }
+
+      ol > li > ul > li {
+        position:relative;
+        background-color:#EEE;
+      }
+
+      ol > li > ul > li > a {
+        border-top:1px solid #FFF;
+		color:green;
+      }
+
+      ol > li > ul > li:hover {
+        background-color:#DDD;
+      }
+
+      ol > li > ul > li:hover > a {
+        color:#09C;
+      }
+
+											@media screen and (max-width: 1150px) {
+											
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+}
+#container{
+margin-top:60px;
+	width: 100%;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button1 i{
+font-size:14px;
+			}
+
+.button3{
+	width:100px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button3 i{
+font-size:14px;
+			}
+
+.square
+{
+clear:both;
+	width: 70%;
+	margin-left:10%;
+	margin-right:auto;
+}
+#map {
+	margin-top:100px;
+        width:560px; 
+	height:450px;
+	float: left;
+	background-color:#ffffdd;
+	margin-left:20px;
+	position:static;
+	z-index:0;
+       }
+
+}
+
+											@media screen and (max-width: 850px) {
+											
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:10px;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:10px;
+	background-color: #32cd32;
+}
+.button1 i{
+font-size:14px;
+			}
+
+.button3{
+	width:80px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button3 i{
+font-size:14px;
+			}	
+			 }
+			 
+			 
+											@media screen and (max-width: 714px) {
+	.square{
+	clear:both;
+	width: 90%;
+	margin-left:3%;
+	margin-right:auto;
+}										
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:10px;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:10px;
+	background-color: #32cd32;
+}
+.button1 i{
+font-size:14px;
+			}
+
+.button3{
+	width:70px;
+	height:25px;
+	text-align:left;
+	background-color: #32cd32;
+}
+.button3 i{
+font-size:14px;
+			}
+#map {
+	margin-top:75px;
+        width:560px; 
+	height:450px;
+	float: left;
+	background-color:#ffffff;
+	margin-left:15px;
+	margin-right:auto;
+	position:static;
+	z-index:0;
+       }			
+			 }
+			 
+			 											@media screen and (max-width: 610px) {
+											
+.square{
+clear:both;
+	width: 88%;
+	margin-left:2%;
+	margin-right:auto;
+
+}
+#map {
+	margin-top:60px;
+        width:400px; 
+	height:350px;
+	float: left;
+	margin-left:10px;
+	margin-right:auto;
+	position:static;
+	z-index:0;
+       }	
+.sm
+{
+	float:left;		
+	margin:10px;
+	width:340px;
+	height:230px;
+	background-color: #ffffdd;
+	text-align: center;
+	text-align:justify;
+	padding:20px;
+	color:black;
+	margin-top:2px;
+}
+.yt{
+	margin-left:40px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100px;
+	height:100px;
+	background-color: #d94348;
+	float:left;
+	border-radius: 15px;
+}
+
+.fb{
+	margin:10px;
+	width:100px;
+	height:100px;
+	background-color: #4668b3;
+	float: left;
+	   border-radius: 15px;
+}
+.gplus{
+	margin-left:40px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100px;
+	height:100px;
+	background-color: #d95333;
+	   border-radius: 15px;
+}
+.tw{
+	margin:10px;
+	width:100px;
+	height:100px;
+	background-color: #3095d3;
+	float: left;
+	border-radius: 15px;
+}	   	   
+			 }
+
+			 											@media screen and (max-width: 550px) {
+											
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:0px;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:10px;
+	background-color: #32cd32;
+	display:none;
+}
+
+.button3{
+text-align:left;
+	width:70px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+	display:none;
+}
+.button2{
+	display:block;
+}
+ol > li {
+        float:left;
+		margin-left:140px;
+		margin-right:auto;
+        width:180px;
+        background-color:#ff1919;
+		color:fff;
+        height:25px;
+		display:block;
+      }
+#map {
+	margin-top:60px;
+        width:400px; 
+	height:350px;
+	float: left;
+	margin-left:10px;
+	margin-right:auto;
+	position:static;
+	z-index:0;
+       }	
+.sm
+{
+	float:left;		
+	margin:10px;
+	width:340px;
+	height:230px;
+	text-align: center;
+	text-align:justify;
+	padding:20px;
+	color:black;
+	margin-top:2px;
+}
+.yt{
+	margin-left:40px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100px;
+	height:100px;
+	background-color: #d94348;
+	float:left;
+	border-radius: 15px;
+}
+
+.fb{
+	margin:10px;
+	width:100px;
+	height:100px;
+	background-color: #4668b3;
+	float: left;
+	   border-radius: 15px;
+}
+.gplus{
+	margin-left:40px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100px;
+	height:100px;
+	background-color: #d95333;
+	   border-radius: 15px;
+}
+.tw{
+	margin:10px;
+	width:100px;
+	height:100px;
+	background-color: #3095d3;
+	float: left;
+	border-radius: 15px;
+}	   
+			 }
+			 @media screen and (max-width: 460px) {
+			 
+#map {
+	margin-top:60px;
+        width:360px; 
+	height:320px;	
+
+       }
+			 }
+                                           @media screen and (max-width: 360px) {
+
+
+
+#map {
+
+	margin-top:60px;
+        width:315px; 
+	height:300px;	
+
+       }
+.tile5
+{
+	width:270px;
+	height:230px;
+	background-color: #ffffdd;
+	text-align: center;
+	text-align:justify;
+	padding:10px;
+	color:black;
+	font-family: 'Crete Round', sans-serif;	
+	margin-top:28px;
+}
+.tile6
+{		
+	width:280px;
+	height:280px;
+	text-align: center;
+	text-align:justify;
+	padding:10px;
+	color:black;
+	font-family: 'Slabo 27px', sans-serif;	
+	margin-top:30px;
+	word-spacing:5px;
+	
+}
+.tile6 a{
+font-size:13px;}
+.sm
+{
+	float:left;		
+	margin:10px;
+	width:340px;
+	height:230px;
+
+	text-align: center;
+	text-align:justify;
+	padding:20px;
+	color:black;
+	margin-top:2px;
+}
+.yt{
+	margin-left:40px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100px;
+	height:100px;
+	background-color: #d94348;
+	float:left;
+	border-radius: 15px;
+}
+
+.fb{
+	margin:10px;
+	width:100px;
+	height:100px;
+	background-color: #4668b3;
+	float: left;
+	   border-radius: 15px;
+}
+.gplus{
+	margin-left:40px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100px;
+	height:100px;
+	background-color: #d95333;
+	   border-radius: 15px;
+}
+.tw{
+	margin:10px;
+	width:100px;
+	height:100px;
+	background-color: #3095d3;
+	float: left;
+	border-radius: 15px;
+}
+#container{
+	width: 100%;
+}
+.rectangle{
+	width: 360px;
+	margin-top:20px;
+	margin-bottom: 20px;
+	margin-left:0px;
+	color:black;
+}
+.square
+{
+	width: 100%;
+}}
+    </style>
+  </head>
+  <body>
+
+
+  <div class="pasek">
+<div class="button1"><a href="restauracja.html" class="tilelink2"><i>STRONA GŁÓWNA</i></a></div>
+<div class="button3"><a href="menu.html" class="tilelink2"><i>MENU</i></a></div>
+<div class="button3"><a href="kont.html" class="tilelink2"><i>KONTAKT</i></a></div>
+<div class="button3"><a href="galer.html" class="tilelink2"><i>GALERIA</i></a></div>
+
+<div class="button2">
+<ol>
+    <li><a href="#">MENU</a>
+      <ul>
+        <li><a href="restauracja.html" >STRONA GŁÓWNA</a></li>
+	<li><a href="menu.html" >MENU</a></li>
+	<li><a href="kont.html" >KONTAKT</a></li>
+	<li><a href="galer.html" >GALERIA</a></li>	
+      </ul>
+    </li>
+	</ol></div>
+</div>
+<div id="container">
+	<div class="square">
+<div id="map"></div>
+</div>
+
+<div class="square">
+<div class="tile5"><h2>ADRES</h2>
+<a>PixelPlay, cuboid NiceTeam<br />
+Otwarte (od 12:00 do 22:00) <br />
+Szczegóły lokalu:<br />
+tel. 600 100 100<br />
+</div>
+
+<div class="tile6"><h2>GODZINY OTWARCIA</h2>
+Sobota: 12:00 - 21:00<br />
+Niedziela: 12:00 - 21:00<br /><br />
+<b>Informacje o dostawie</b><br />
+Dowóz w obrębie cuboidów 3 zł<br />
+</div>
+<div class="sm">
+<div class="yt">
+<a href="https://www.youtube.com" target = "_blank" class = "sociallink"><i class="icon-youtube"></i></a>
+</div>
+<div class="fb">
+<a href="https://www.facebook.com" target="_blank" class="sociallink">
+<i class="icon-facebook-squared"></i></a>
+</div>
+<div class="gplus"><a href="https://plus.google.com" target= "_blank" class="sociallink"><i class="icon-gplus"></i></a></div>
+<div class="tw"><a href="https://twitter.com" target="_blank" class="sociallink"><i class="icon-twitter"></i></a></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+
+</div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 51.797581, lng: 19.438540};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&oe=UTF8&msa=0&mid=1F8PziqrFXv_XXEQvkHgGumHblpI&ll=50.90677381795824%2C15.685612999999996&z=9">
+    </script>
+  </body>
+</html>

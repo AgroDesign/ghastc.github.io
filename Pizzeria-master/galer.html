@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Ghast Café - Galeria</title>
+<meta name="description" content="Galeria restauracji Ghast Café">
+<meta name="keywords" content="Kawa, woda, tort, Makłowicz, Stypy">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Crete+Round" rel = "stylesheet" type = "text/css">
+
+<style>
+body
+{
+background-repeat: no-repeat;
+background-position: top;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+background-color: #ffffdd;
+color: #ffffff;
+margin: 0;
+padding: 0;
+}
+.square
+{
+	width:90%;
+	margin:5%;
+	
+	align:center;	
+	float:left;
+}
+
+.square2
+{
+	width:90%;
+	margin:65px;
+	margin-bottom:20px;
+	align:center;	
+	float:left;
+	display:none;
+}
+
+.square3
+{
+	width:90%;
+	margin:65px;
+	margin-bottom:20px;
+	align:center;	
+	float:left;
+	display:none;
+}
+
+.s1{
+width:100%;
+}
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:60px;
+}
+.button1{
+	width:200px;
+	height:30px;
+	background-color: #32cd32;
+	float: left;
+	text-align: center;
+	margin-left:8px;
+}
+.button1 i{font-family: 'Crete Round', sans-serif;
+font-size:20px;}
+
+.button1:hover{
+	background-color: #21bc21;
+	color: #eeeeee;
+}
+.button3{
+	width:200px;
+	height:30px;
+	background-color: #32cd32;
+	float: left;
+	text-align: center;
+	margin-left:8px;
+}
+.button3 i{font-family: 'Crete Round', sans-serif;
+font-size:20px;}
+
+.button3:hover{
+	background-color: #21bc21;
+	color: #EEEEEE;
+}
+
+a.tilelink2
+{
+	color:#ffffff;
+	text-decoration:none;
+	display:block;
+}
+.tile1
+{
+	margin:10px;
+	width:205px;
+	height:110px;
+	background-color: #303030;
+	float: left;
+	text-align: center;
+}
+.tile1:hover{
+transition: 0.2s all linear;
+transform: scale(1.6);
+}
+
+.tile3
+{
+	margin:10px;
+	width:205px;
+	height:110px;
+	background-color: #303030;
+	float: left;
+	text-align: center;
+}
+.tile3:hover{
+transition: 0.2s all linear;
+transform: scale(1.6);
+}
+.button2{
+	display:none;
+	width:100%;
+	height:25px;
+}
+ol {
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        background-color: #32cd32;  /*kolo niebieski ( na pasku) */
+        font-size:18px;
+        height:25px;
+        line-height:30px;
+        text-align:center;
+      }
+
+      /* wygląd wszystkich elementów - a - znajdujących się w elemencie - ol */
+      ol a {
+        display:block;
+        text-decoration:none;
+        color:#fff;
+        padding:0 5px;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol */
+      ol > li {
+        float:left;
+		margin-left:140px;
+        width:180px;
+        background-color:#303030;
+		color:white;
+        height:25px;
+		display:none;
+      }
+	  
+	  ol > li:hover {
+        background-color:#EEE;
+      }
+
+      /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover > a {
+        color:#ff1919;
+      }
+
+      /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover > ul {
+        display:block;
+      }
+
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU------------------------ */
+
+      /* wygląd głównych rozwijanych elementów - ul */
+      ol > li > ul {
+        display:none;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej */
+      ol > li > ul > li {
+        position:relative;
+        background-color:#EEE;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej */
+      ol > li > ul > li > a {
+        border-top:1px solid #FFF;
+		color:green;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+      ol > li > ul > li:hover {
+        background-color:#DDD;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+      ol > li > ul > li:hover > a {
+        color:#09C;
+      }
+
+                                      @media screen and (max-width: 1260px) {
+											
+
+.square{
+display:none;}
+
+.square2{
+display:block;}
+
+}
+										@media screen and (max-width: 1120px) {
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button1 i{
+font-size:14px;
+			}
+
+.button3{
+	width:100px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button3 i{
+font-size:14px;
+			}
+			}
+
+                                      @media screen and (max-width: 1016px) {
+											
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:80px;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button1 i{
+font-size:14px;
+			}
+
+.button3{
+	width:100px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button3 i{
+font-size:14px;
+			}
+.square{
+display:none;}
+
+.square2{
+display:none;
+}
+.square3{
+display:block;
+}
+}
+
+											@media screen and (max-width: 770px) {
+
+										
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:10px;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:10px;
+	background-color: #32cd32;
+}
+.button1 i{
+font-size:14px;
+			}
+
+.button3{
+	width:80px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+}
+.button3 i{
+font-size:14px;
+			}	
+}
+@media screen and (max-width: 765px) {
+	.square{
+display:none;}
+
+.square2{
+display:block;
+width: 80%;
+	margin-left:15%;
+}
+.square3{
+display:none;
+
+}
+	}		 
+			 
+											@media screen and (max-width: 700px) {
+.square2{
+clear:both;
+	width: 80%;
+	margin-left:15%;
+
+	
+}										
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:10px;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:10px;
+	background-color: #32cd32;
+}
+.button1 i{
+font-size:14px;
+			}
+
+.button3{
+	width:70px;
+	height:25px;
+	text-align:left;
+	background-color: #32cd32;
+}
+.button3 i{
+font-size:14px;
+			}		
+			 }
+			 
+			 											@media screen and (max-width: 610px) {
+											
+.square2{
+clear:both;
+	width: 80%;
+	margin-left:15%;
+}
+	
+			 }
+
+			 											@media screen and (max-width: 560px) {
+											
+.pasek{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px; 
+    background-color: #32cd32;
+	float:left;
+	padding-left:0px;
+}
+.button1{
+	width:120px;
+	height:25px;
+	margin-left:10px;
+	background-color: #32cd32;
+	display:none;
+}
+
+.button3{
+text-align:left;
+	width:60px;
+	height:25px;
+	margin-left:28px;
+	background-color: #32cd32;
+	display:none;
+}
+.button2{
+	display:block;
+}
+ol > li {
+        float:left;
+		margin-left:140px;
+		margin-right:auto;
+        width:180px;
+        background-color:#ff1919;
+		color:fff;
+        height:25px;
+		display:block;
+      }
+
+	   
+			 }
+			 @media screen and (max-width: 460px) {
+			 
+.square2
+{
+	width:80%;
+	margin-left:15%;
+	margin-bottom:20px;	
+	float:left;
+}
+			 }
+                                           
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="pasek">
+<div class="button1"><a href = "restauracja.html" class="tilelink2"><i>STRONA GŁÓWNA</i></a></div>
+<div class="button3"><a href = "menu.html" class="tilelink2"><i>MENU</i></a></div>
+<div class="button3"><a href = "kont.html" class="tilelink2"><i>KONTAKT</i></a></div>
+<div class="button3"><a href = "galer.html" class="tilelink2"><i>GALERIA</i></a></div>
+
+<div class="button2">
+<ol>
+    <li><a href="#">MENU</a>
+      <ul>
+        <li><a href="restauracja.html" >STRONA GŁÓWNA</a></li>
+	<li><a href="menu.html" >MENU</a></li>
+	<li><a href="kont.html" >KONTAKT</a></li>
+	<li><a href="galer.html" >GALERIA</a></li>	
+      </ul>
+    </li>
+	</ol></div>
+</div>
+
+<div class="square">			
+			<div class="s1">
+			 <div class="tile1"><img src="serio/maklowicz.jpg" width="205" height="110" alt="cos" /></div>
+           <div class="tile1"><img src="serio/p1.jpg" width="205" height="110" alt="cos2"/></div>
+           <div class="tile1"><img src="serio/p2.jpg" width="205" height="110" alt="cos3"/></div>
+           <div class="tile1"><img src="serio/p3.png" width="205" height="110" alt="cos4"/></div>
+           <div class="tile1"><img src="serio/p4.jpg" width="205" height="110" alt="cos5"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+             <div class="s1">
+            <div class="tile3"><img src="serio/p5.jpg" width="205" height="110" alt="cos6"/></div>
+            <div class="tile3"><img src="serio/p6.jpg" width="205" height="110" alt="cos7"/></div>
+            <div class="tile3"><img src="serio/p7.jpg" width="205" height="110" alt="cos8"/></div>
+            <div class="tile3"><img src="serio/p8.jpg" width="205" height="110" alt="cos9"/></div>
+            <div class="tile3"><img src="serio/p9.jpg" width="205" height="110" alt="cos10"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+             <div class="tile3"><img src="serio/p19.jpg" width="205" height="110" alt="cos11"/></div>
+            <div class="tile3"><img src="serio/p10.jpg" width="205" height="110" alt="cos12"/></div>
+            <div class="tile3"><img src="serio/p11.jpg" width="205" height="110" alt="cos13"/></div>
+            <div class="tile3"><img src="serio/p12.jpg" width="205" height="110" alt="cos14"/></div>
+            <div class="tile3"><img src="serio/p13.jpg" width="205" height="110" alt="cos15"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+			<div class="tile3"><img src="serio/p14.jpg" width="205" height="110" alt="cos16"/></div>
+            <div class="tile3"><img src="serio/p15.jpg" width="205" height="110" alt="cos17"/></div>
+            <div class="tile3"><img src="serio/pp.jpg" width="205" height="110" alt="cos18"/></div>
+            <div class="tile3"><img src="serio/p17.jpg" width="205" height="110" alt="cos19"/></div>
+            <div class="tile3"><img src="serio/makl.jpg" width="205" height="110" alt="cos20"/></div>
+			</div>
+            <div style="clear:both;"></div>
+        </div>
+		
+<div class="square2">			
+			<div class="s1">
+		   <div class="tile1"><img src="serio/maklowicz.jpg" width="205" height="110" alt="cos" /></div>
+           <div class="tile1"><img src="serio/p1.jpg" width="205" height="110" alt="cos2"/></div>
+           <div class="tile1"><img src="serio/p2.jpg" width="205" height="110" alt="cos3"/></div>
+           <div class="tile1"><img src="serio/p3.png" width="205" height="110" alt="cos4"/></div>	
+			</div>
+            <div style="clear:both;"></div>
+			
+             <div class="s1">
+			 <div class="tile1"><img src="serio/p4.jpg" width="205" height="110" alt="cos5"/></div>
+            <div class="tile3"><img src="serio/p5.jpg" width="205" height="110" alt="cos6"/></div>
+            <div class="tile3"><img src="serio/p6.jpg" width="205" height="110" alt="cos7"/></div>
+            <div class="tile3"><img src="serio/p7.jpg" width="205" height="110" alt="cos8"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+			<div class="tile3"><img src="serio/p8.jpg" width="205" height="110" alt="cos9"/></div>
+            <div class="tile3"><img src="serio/p9.jpg" width="205" height="110" alt="cos10"/></div>
+             <div class="tile3"><img src="serio/p19.jpg" width="205" height="110" alt="cos11"/></div>
+            <div class="tile3"><img src="serio/p10.jpg" width="205" height="110" alt="cos12"/></div>
+
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+			<div class="tile3"><img src="serio/p11.jpg" width="205" height="110" alt="cos16"/></div>
+            <div class="tile3"><img src="serio/p12.jpg" width="205" height="110" alt="cos17"/></div>
+            <div class="tile3"><img src="serio/p13.jpg" width="205" height="110" alt="cos18"/></div>
+            <div class="tile3"><img src="serio/p14.jpg" width="205" height="110" alt="cos19"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+            <div class="tile3"><img src="serio/p15.jpg" width="205" height="110" alt="cos20"/></div>
+			<div class="tile3"><img src="serio/pp.jpg" width="205" height="110" alt="cos13"/></div>
+            <div class="tile3"><img src="serio/p17.jpg" width="205" height="110" alt="cos14"/></div>
+            <div class="tile3"><img src="serio/makl.jpg" width="205" height="110" alt="cos15"/></div>
+			</div>
+            <div style="clear:both;"></div>
+        </div>
+		
+<div class="square3">			
+			<div class="s1">
+		   <div class="tile1"><img src="serio/maklowicz.jpg" width="205" height="110" alt="cos" /></div>
+           <div class="tile1"><img src="serio/p1.jpg" width="205" height="110" alt="cos2"/></div>
+           <div class="tile1"><img src="serio/p2.jpg" width="205" height="110" alt="cos3"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+             <div class="s1">
+			 <div class="tile1"><img src="serio/p3.png" width="205" height="110" alt="cos4"/></div>	
+			 <div class="tile1"><img src="serio/p4.jpg" width="205" height="110" alt="cos5"/></div>
+            <div class="tile3"><img src="serio/p5.jpg" width="205" height="110" alt="cos6"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+            <div class="tile3"><img src="serio/p6.jpg" width="205" height="110" alt="cos7"/></div>
+            <div class="tile3"><img src="serio/p7.jpg" width="205" height="110" alt="cos8"/></div>
+			<div class="tile3"><img src="serio/p8.jpg" width="205" height="110" alt="cos9"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+            <div class="tile3"><img src="serio/p9.jpg" width="205" height="110" alt="cos10"/></div>
+             <div class="tile3"><img src="serio/p19.jpg" width="205" height="110" alt="cos11"/></div>
+            <div class="tile3"><img src="serio/p10.jpg" width="205" height="110" alt="cos12"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+			<div class="tile3"><img src="serio/p11.jpg" width="205" height="110" alt="cos16"/></div>
+            <div class="tile3"><img src="serio/p12.jpg" width="205" height="110" alt="cos17"/></div>
+            <div class="tile3"><img src="serio/p13.jpg" width="205" height="110" alt="cos18"/></div>
+            
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+			<div class="tile3"><img src="serio/p14.jpg" width="205" height="110" alt="cos19"/></div>
+            <div class="tile3"><img src="serio/p15.jpg" width="205" height="110" alt="cos20"/></div>
+			<div class="tile3"><img src="serio/pp.jpg" width="205" height="110" alt="cos13"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+			<div class="s1">
+            <div class="tile3"><img src="serio/p17.jpg" width="205" height="110" alt="cos14"/></div>
+            <div class="tile3"><img src="serio/makl.jpg" width="205" height="110" alt="cos15"/></div>
+			</div>
+            <div style="clear:both;"></div>
+			
+        </div>				
+</body>
+</html>
